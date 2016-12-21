@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="SpeechAssets\SampleUtterances.txt" />
     <Content Include="Web.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -105,6 +106,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BCHelloAlexaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -113,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\BCHelloAlexa.pubxml" />
+    <Content Include="SpeechAssets\IntentSchema.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

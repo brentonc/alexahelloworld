@@ -1,0 +1,4 @@
+﻿BCHelloAlexa say hello
+BCHelloAlexa say hi
+BCHelloAlexa hello
+BCHelloAlexa hi

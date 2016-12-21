@@ -16,13 +16,13 @@ namespace AlexaHelloWorld.Controllers
             return new
             {
                 version = "1.0",
-                sessionAttributes = new { },
+                
                 response = new
                 {
                     outputSpeech = new
                     {
-                        type = "text",
-                        text = "Hello Brenton"
+                        type = "PlainText",
+                        text = "Hello Brenton " + DateTime.Now
                     },
                     card = new
                     {
@@ -31,7 +31,8 @@ namespace AlexaHelloWorld.Controllers
                         content = "Hello Brenton\nIsn't this fun?"
                     },
                     shouldEndSession = true
-                }
+                },
+                sessionAttributes = new { },
             };
 
             /*  RESPONSE SCHEMA

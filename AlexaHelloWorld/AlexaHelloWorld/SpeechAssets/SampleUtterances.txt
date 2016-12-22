@@ -2,3 +2,5 @@
 BCHelloAlexa say hi
 BCHelloAlexa hello
 BCHelloAlexa hi
+BCHelloAlexa whats up
+BCHelloAlexa hola

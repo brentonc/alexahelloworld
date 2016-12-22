@@ -14,13 +14,16 @@ namespace AlexaHelloWorld.Controllers
             AlexaResponse response;
             switch (request.Request.Intent.Name)
             {
-                case "BCHelloAlexa":
+                case "BCHelloAlexaIntent":
                     response = InvokeHelloIntent(request);
                     break;
-                case "SetDeskHeight":
+                case "SetDeskHeightIntent":
                     response = InvokeSetDeskHeightIntent(request);
                     break;
-                case "GetDeskHeight":
+                case "ResetDeskIntent":
+                    response = InvokeResetDeskIntent(request);
+                    break;
+                case "GetDeskHeightIntent":
                 default:
                     response = InvokeGetDeskHeightIntent(request);
                     break;
@@ -28,6 +31,12 @@ namespace AlexaHelloWorld.Controllers
             }
             return response;
 
+        }
+
+        private AlexaResponse InvokeResetDeskIntent(AlexaRequest request)
+        {
+            DeskManager.Instance.EnqueueCommand(new Command() { CommandCode = "RESET" });
+            return new AlexaResponse($"Ok, I am resetting RobotDesk for you.");
         }
 
         private AlexaResponse InvokeGetDeskHeightIntent(AlexaRequest request)
@@ -50,7 +59,7 @@ namespace AlexaHelloWorld.Controllers
                 {
                     DeskManager.Instance.EnqueueCommand(new Command() { CommandCode = "MOVE", CommandArg = height.ToString() });
 
-                    response = new AlexaResponse($"You asked to set the desk height to {height}");
+                    response = new AlexaResponse($"Sure, I am moving RobotDesk to {height} inches.");
                 }
                 else
                 {

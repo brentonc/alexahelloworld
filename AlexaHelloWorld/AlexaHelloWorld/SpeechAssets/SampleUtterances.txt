@@ -1,18 +1,24 @@
-﻿BCHelloAlexa say hello
-BCHelloAlexa say hi
-BCHelloAlexa hello
-BCHelloAlexa hi
-BCHelloAlexa whats up
-BCHelloAlexa hola
+﻿BCHelloAlexaIntent say hello
+BCHelloAlexaIntent say hi
+BCHelloAlexaIntent hello
+BCHelloAlexaIntent hi
+BCHelloAlexaIntent whats up
+BCHelloAlexaIntent hola
 
-SetDeskHeight move desk to {height} inches
-SetDeskHeight raise desk to {height} inches
-SetDeskHeight lower desk to {height} inches
-SetDeskHeight move desk to {height}
-SetDeskHeight raise desk to {height}
-SetDeskHeight lower desk to {height}
+SetDeskHeightIntent move to {height} inches
+SetDeskHeightIntent raise to {height} inches
+SetDeskHeightIntent lower to {height} inches
+SetDeskHeightIntent move to {height}
+SetDeskHeightIntent raise to {height}
+SetDeskHeightIntent lower to {height}
 
-GetDeskHeight what is my desks height
-GetDeskHeight what is my desks current height
-GetDeskHeight how high is my desk
-GetDeskHeight current height
+GetDeskHeightIntent what is her height
+GetDeskHeightIntent what is his height
+GetDeskHeightIntent what is its height
+GetDeskHeightIntent what is my desks current height
+GetDeskHeightIntent how high
+GetDeskHeightIntent current height
+
+ResetDeskIntent reset
+ResetDeskIntent to reset
+ResetDeskIntent start over

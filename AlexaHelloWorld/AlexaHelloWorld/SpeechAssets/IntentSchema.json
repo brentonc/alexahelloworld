@@ -1,19 +1,22 @@
 ﻿{
   "intents": [
     {
-      "intent": "BCHelloAlexa"
+      "intent": "BCHelloAlexaIntent"
     },
     {
-      "intent": "SetDeskHeight",
+      "intent": "SetDeskHeightIntent",
       "slots": [
         {
-          "name": "Height",
+          "name": "height",
           "type": "AMAZON.NUMBER"
         }
       ]
     },
     {
-      "intent": "GetDeskHeight"
+      "intent": "ResetDeskIntent"
+    },
+    {
+      "intent": "GetDeskHeightIntent"
     },
     {
       "intent": "AMAZON.HelpIntent"

@@ -2,6 +2,7 @@
 using System.Web.Http;
 using Alexa.Contracts;
 using System.Linq;
+using AlexaHelloWorld.Models;
 
 namespace AlexaHelloWorld.Controllers
 {
@@ -26,74 +27,7 @@ namespace AlexaHelloWorld.Controllers
 
             }
             return response;
-            //return new
-            //{
-            //    version = "1.0",
-                
-            //    response = new
-            //    {
-            //        outputSpeech = new
-            //        {
-            //            type = "PlainText",
-            //            text = "Hello Brenton " + DateTime.Now
-            //        },
-            //        card = new
-            //        {
-            //            type = "Simple",
-            //            title = "BC Hello Alexa Skill",
-            //            content = "Hello Brenton\nIsn't this fun?"
-            //        },
-            //        shouldEndSession = true
-            //    },
-            //    sessionAttributes = new { },
-            //};
 
-            /*  RESPONSE SCHEMA
-             {
-  "version": "string",
-  "sessionAttributes": {
-    "string": object
-  },
-  "response": {
-    "outputSpeech": {
-      "type": "string",
-      "text": "string",
-      "ssml": "string"
-    },
-    "card": {
-      "type": "string",
-      "title": "string",
-      "content": "string",
-      "text": "string",
-      "image": {
-        "smallImageUrl": "string",
-        "largeImageUrl": "string"
-      }
-    },
-    "reprompt": {
-      "outputSpeech": {
-        "type": "string",
-        "text": "string",
-        "ssml": "string"
-      }
-    },
-    "directives": [
-      {
-        "type": "string",
-        "playBehavior": "string",
-        "audioItem": {
-          "stream": {
-            "token": "string",
-            "url": "string",
-            "offsetInMilliseconds": 0
-          }
-        }
-      }
-    ],
-    "shouldEndSession": boolean
-  }
-} 
-             */
         }
 
         private AlexaResponse InvokeGetDeskHeightIntent(AlexaRequest request)
@@ -114,6 +48,8 @@ namespace AlexaHelloWorld.Controllers
                 int height;
                 if (int.TryParse(slots.FirstOrDefault(s => s.Key == "height").Value, out height))
                 {
+                    DeskManager.Instance.EnqueueCommand(new Command() { CommandCode = "MOVE", CommandArg = height.ToString() });
+
                     response = new AlexaResponse($"You asked to set the desk height to {height}");
                 }
                 else

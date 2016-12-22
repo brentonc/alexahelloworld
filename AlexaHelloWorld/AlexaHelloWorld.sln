@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexaHelloWorld", "AlexaHelloWorld\AlexaHelloWorld.csproj", "{A36DB8CE-562C-4838-8CB6-C9198E8E4370}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexa.Contracts", "Alexa.Contracts\Alexa.Contracts.csproj", "{3BBDBE5F-8079-4A3D-BAD5-87F233554D99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A36DB8CE-562C-4838-8CB6-C9198E8E4370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A36DB8CE-562C-4838-8CB6-C9198E8E4370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A36DB8CE-562C-4838-8CB6-C9198E8E4370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBDBE5F-8079-4A3D-BAD5-87F233554D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBDBE5F-8079-4A3D-BAD5-87F233554D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBDBE5F-8079-4A3D-BAD5-87F233554D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBDBE5F-8079-4A3D-BAD5-87F233554D99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

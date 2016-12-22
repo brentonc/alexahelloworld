@@ -148,6 +148,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\AIExceptionLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SpeechAssets\IntentSchema.json" />
@@ -162,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alexa.Contracts\Alexa.Contracts.csproj">
+      <Project>{3bbdbe5f-8079-4a3d-bad5-87f233554d99}</Project>
+      <Name>Alexa.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

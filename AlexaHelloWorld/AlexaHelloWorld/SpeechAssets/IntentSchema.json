@@ -4,6 +4,18 @@
       "intent": "BCHelloAlexa"
     },
     {
+      "intent": "SetDeskHeight",
+      "slots": [
+        {
+          "name": "Height",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "GetDeskHeight"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     }
   ]

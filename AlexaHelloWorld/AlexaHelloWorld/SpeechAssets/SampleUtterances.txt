@@ -4,3 +4,15 @@ BCHelloAlexa hello
 BCHelloAlexa hi
 BCHelloAlexa whats up
 BCHelloAlexa hola
+
+SetDeskHeight move desk to {height} inches
+SetDeskHeight raise desk to {height} inches
+SetDeskHeight lower desk to {height} inches
+SetDeskHeight move desk to {height}
+SetDeskHeight raise desk to {height}
+SetDeskHeight lower desk to {height}
+
+GetDeskHeight what is my desks height
+GetDeskHeight what is my desks current height
+GetDeskHeight how high is my desk
+GetDeskHeight current height

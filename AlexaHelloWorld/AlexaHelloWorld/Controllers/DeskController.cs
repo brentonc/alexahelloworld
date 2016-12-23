@@ -1,4 +1,5 @@
 ﻿using AlexaHelloWorld.Models;
+using System;
 using System.Threading;
 using System.Web.Http;
 
@@ -7,7 +8,7 @@ namespace AlexaHelloWorld.Controllers
     public class DeskController : ApiController
     {
         [HttpGet, Route("api/desk/command")]
-        public dynamic WaitCommand(dynamic request)
+        public dynamic WaitCommand()
         {   
             int MaxWait = 100;
             int i = 0;
@@ -19,6 +20,12 @@ namespace AlexaHelloWorld.Controllers
             }
 
             return DeskManager.Instance.DequeueCommand();
+        }
+
+        [HttpPost, Route("api/desk/heightinfo")]
+        public void UpdateCurrentHeight([FromBody]string height)//Nullable<int> height)
+        {
+            DeskManager.Instance.LastKnownHeight = Convert.ToInt32(height);
         }
 
         [HttpGet, Route("api/desk/command/peek")]

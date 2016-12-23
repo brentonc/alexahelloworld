@@ -11,7 +11,7 @@ namespace AlexaHelloWorld.Models
         private static DeskManager _mgr = new DeskManager();
 
         private Command _command;
-
+        
         private DeskManager()
         {
             _command = null;
@@ -25,6 +25,8 @@ namespace AlexaHelloWorld.Models
                 return _mgr;
             }
         }
+
+        public Nullable<int> LastKnownHeight { get; set; }
 
         public bool HasCommand()
         {
@@ -49,6 +51,7 @@ namespace AlexaHelloWorld.Models
         }
         
         public DateTime Updated { get; set; }
+
     }
 
     public class Command

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Alexa.Contracts;
 using System.Linq;
 using AlexaHelloWorld.Models;
@@ -41,7 +40,15 @@ namespace AlexaHelloWorld.Controllers
 
         private AlexaResponse InvokeGetDeskHeightIntent(AlexaRequest request)
         {
-            return new AlexaResponse("You asked to get the desk height");
+            var height = DeskManager.Instance.LastKnownHeight;
+            if (height.HasValue)
+            {
+                return new AlexaResponse($"Last I heard the desk was at {height} inches above base.");
+            }
+            else
+            {
+                return new AlexaResponse("I'm not sure how high the desk is right now.");
+            }
         }
 
         private AlexaResponse InvokeSetDeskHeightIntent(AlexaRequest request)

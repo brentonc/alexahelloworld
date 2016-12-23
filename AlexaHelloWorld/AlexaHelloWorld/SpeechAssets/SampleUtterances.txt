@@ -8,9 +8,11 @@ HelloRobotDeskIntent hola
 SetDeskHeightIntent move to {height} inches
 SetDeskHeightIntent raise to {height} inches
 SetDeskHeightIntent lower to {height} inches
+SetDeskHeightIntent to {height} inches
 SetDeskHeightIntent move to {height}
 SetDeskHeightIntent raise to {height}
 SetDeskHeightIntent lower to {height}
+
 
 GetDeskHeightIntent what is her height
 GetDeskHeightIntent what is his height

@@ -6,15 +6,15 @@ using AlexaHelloWorld.Models;
 
 namespace AlexaHelloWorld.Controllers
 {
-    public class BCHelloAlexaController : ApiController
+    public class AlexaController : ApiController
     {
-        [HttpPost, Route("api/alexa/hello")]
-        public dynamic HCHelloAlexa(AlexaRequest request)
+        [HttpPost, Route("api/1_0/alexa")]
+        public dynamic AlexaRequestEndpoint(AlexaRequest request)
         {
             AlexaResponse response;
             switch (request.Request.Intent.Name)
             {
-                case "BCHelloAlexaIntent":
+                case "HelloRobotDeskIntent":
                     response = InvokeHelloIntent(request);
                     break;
                 case "SetDeskHeightIntent":

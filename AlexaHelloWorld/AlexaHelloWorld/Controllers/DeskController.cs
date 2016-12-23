@@ -1,9 +1,4 @@
 ﻿using AlexaHelloWorld.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading;
 using System.Web.Http;
 
@@ -14,10 +9,13 @@ namespace AlexaHelloWorld.Controllers
         [HttpGet, Route("api/desk/command")]
         public dynamic WaitCommand(dynamic request)
         {   
-            
-            while (!DeskManager.Instance.HasCommand())
+            int MaxWait = 100;
+            int i = 0;
+            while (!DeskManager.Instance.HasCommand() && i < MaxWait)
             {
-                Thread.Sleep(1000);
+                i++;
+                Thread.Sleep(500);
+                
             }
 
             return DeskManager.Instance.DequeueCommand();

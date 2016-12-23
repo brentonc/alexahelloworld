@@ -141,7 +141,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\BCHelloAlexaController.cs" />
+    <Compile Include="Controllers\AlexaController.cs" />
     <Compile Include="Controllers\DeskController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">

@@ -1,9 +1,9 @@
-﻿BCHelloAlexaIntent say hello
-BCHelloAlexaIntent say hi
-BCHelloAlexaIntent hello
-BCHelloAlexaIntent hi
-BCHelloAlexaIntent whats up
-BCHelloAlexaIntent hola
+﻿HelloRobotDeskIntent say hello
+HelloRobotDeskIntent say hi
+HelloRobotDeskIntent hello
+HelloRobotDeskIntent hi
+HelloRobotDeskIntent whats up
+HelloRobotDeskIntent hola
 
 SetDeskHeightIntent move to {height} inches
 SetDeskHeightIntent raise to {height} inches
